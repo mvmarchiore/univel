@@ -45,7 +45,7 @@ public class UsuarioDAO {
 
     public ResultadoCadastro inserir(Usuario usuario) {
         if (existeUsuario(usuario.getLogin())) {
-            return ResultadoCadastro.USUARIO_JA_EXISTE;
+            return ResultadoCadastro.USUARIO_EXISTE;
         }
 
         String sql = "INSERT INTO usuarios (nome_usuario, senha_hash, data_criacao) VALUES (?, ?, ?)";

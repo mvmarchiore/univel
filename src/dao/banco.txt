@@ -1,0 +1,11 @@
+create database univel;
+use univel;
+
+
+create table usuarios (
+id int primary key,
+nome_usuario varchar(50),
+senha_hash varchar(64),
+data_criacao datetime
+
+);
